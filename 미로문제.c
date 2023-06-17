@@ -1,5 +1,4 @@
-﻿#include <iostream>
-#include <stack>
+﻿#include <stdio.h>
 
 #define MAX_ROW 9
 #define MAX_COL 6
@@ -59,7 +58,7 @@ void push(int* top, element position) {
 element pop(int* top) {
 	element result;
 	if (*top < 0) {
-		cout << "Stack is empty.\n";
+		printf("stack is empty.\n");
 	}
 	else {
 		result = st[*top];
@@ -116,10 +115,10 @@ void path(void) {
 			position = pop(&top);
 			cout << position.row << " " << position.col << endl;
 		}
-		cout << "탈출 성공\n";
+		printf("탈출 성공\n");
 	}
 	else {
-		cout << "탈출 실패\n";
+		printf("탈출 실패\n");
 	}
 }
 
