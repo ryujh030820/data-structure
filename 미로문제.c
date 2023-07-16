@@ -6,8 +6,6 @@
 #define EXIT_COL 6
 #define MAX_STACK_SIZE 100
 
-using namespace std;
-
 typedef struct {
 	short int vert;
 	short int horiz;
@@ -113,7 +111,7 @@ void path(void) {
 	if (found == true) {
 		while (top>-1) {
 			position = pop(&top);
-			cout << position.row << " " << position.col << endl;
+			printf("%d %d\n",position.row,position.col);
 		}
 		printf("탈출 성공\n");
 	}
